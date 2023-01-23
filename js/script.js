@@ -29,10 +29,10 @@
         slidesCounter.forEach(item => {
             item.addEventListener('click', (e) => {
                 const slideIndex = slidesCounter.indexOf(e.target);
-                
+
                 activeSlide = slideIndex + 1;
                 slideOffsetX = parseInt(width) * slideIndex;
-
+                
                 goToSlide();
             });
         });
@@ -73,7 +73,7 @@
             } else {
                 slideOffsetX += parseInt(width);
             }
-        
+
             if (activeSlide == slides.length) {
                 activeSlide = 1;
             } else {
@@ -89,13 +89,13 @@
             } else {
                 slideOffsetX -= parseInt(width);
             }
-        
+
             if (activeSlide == 1) {
                 activeSlide = slides.length;
             } else {
                 activeSlide--;
             }
-
+            
             goToSlide();
         });
     }
